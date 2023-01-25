@@ -1,0 +1,36 @@
+{
+	"name": "shiref/webhook",
+	"description": "just to test webhook reproduction",
+	"require": {
+		"spatie/laravel-webhook-client": "^3.1"
+	},
+	"require-dev": {
+		"orchestra/testbench": "7.0",
+		"pestphp/pest": "^1.21",
+		"pestphp/pest-plugin-laravel": "^1.1",
+		"phpunit/phpunit": "^9.5",
+		"pestphp/pest-plugin-mock": "1.x-dev"
+	},
+	"scripts": {
+		"test": "./vendor/bin/pest"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Shiref\\Webhook\\WebhookServiceProvider"
+			]
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Shiref\\Webhook\\": "src/",
+			"Shiref\\Webhook\\Tests\\": "tests/"
+		}
+	},
+	"minimum-stability": "dev",
+	"config": {
+		"allow-plugins": {
+			"pestphp/pest-plugin": true
+		}
+	}
+}
